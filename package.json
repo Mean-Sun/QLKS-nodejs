@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Mean-Sun/CNPM-Project-1#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.2",
+    "handlebars": "^4.7.7",
+    "mssql": "^7.3.0",
+    "nodemon": "^2.0.15"
   }
 }
