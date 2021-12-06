@@ -26,10 +26,12 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+//set static folder
+app.use(express.static(path.join(__dirname, 'publics')));
+
 
 app.get('/', (req, res) => {
-    res.render('home', { layout: 'main' });
-    //res.send("123")
+    res.render('home', { title: "Hompage", layout: 'main' });
 });
 
 app.listen(3000);
