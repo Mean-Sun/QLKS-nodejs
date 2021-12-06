@@ -12,6 +12,7 @@ var hbs = exphbs.create({
     defaultLayout: 'main',
     partialsDir: path.join(__dirname, './views'),
     layoutsDir: path.join(__dirname, './views/layouts')
+
 });
 //use view engine
 app.engine('handlebars', hbs.engine);
