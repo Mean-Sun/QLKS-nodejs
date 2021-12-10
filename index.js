@@ -8,15 +8,16 @@ const app = express();
 
 
 //config view engine
-var hbs = exphbs.create({
+const hbs = exphbs.create({
     defaultLayout: 'main',
-    partialsDir: path.join(__dirname, './views'),
-    layoutsDir: path.join(__dirname, './views/layouts')
-
+    extname: '.hbs'
 });
+
+
+
 //use view engine
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+app.engine('.hbs', hbs.engine);
+app.set('view engine', '.hbs');
 
 
 //bodyparsers
@@ -27,11 +28,11 @@ app.use(bodyParser.json())
 
 
 //set static folder
-app.use(express.static(path.join(__dirname, 'publics')));
+app.use(express.static(path.join(__dirname, '/publics/')));
 
 
 app.get('/', (req, res) => {
-    res.render('home', { title: "Hompage", layout: 'main' });
+    res.render('home');
 });
 
 app.listen(3000);
