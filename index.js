@@ -28,11 +28,13 @@ app.use(bodyParser.json())
 
 
 //set static folder
-app.use(express.static(path.join(__dirname, '/publics/')));
+app.use(express.static(path.join(__dirname, '/public/')));
 
 
-app.get('/', (req, res) => {
-    res.render('home');
+
+
+app.get('/rent', (req, res) => {
+    res.render('rent-room', { layout: 'main', title: 'Thuê phòng' });
 });
 
 app.listen(3000);

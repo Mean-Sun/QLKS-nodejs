@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: roboto, sans-serif;
+}
+
+.main-background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(190deg, #0B5ED7, #cbddf8, #FFFF);
+    background-size: 400%, 400%;
+}
+
+.rent-room-container {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 20px;
+    background: white;
+}
