@@ -13,7 +13,8 @@ const hbs = exphbs.create({
     extname: '.hbs'
 });
 
-
+const homeRoute = require('./routes/homeRoute');
+const rentRoomRoute = require('./routes/rentRoomRoute');
 
 //use view engine
 app.engine('.hbs', hbs.engine);
@@ -31,7 +32,8 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, '/publics/')));
 
 
-
+app.use('/', homeRoute);
+app.use('/rent-room', rentRoomRoute);
 
 app.get('/', (req, res) => {
     res.render('home', { layout: 'main' });
