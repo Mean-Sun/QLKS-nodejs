@@ -2,27 +2,26 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
-
+require('dotenv').config();
+const port = process.env.PORT || 5000;
 //create app
 const app = express();
 
-
 //config view engine
 const hbs = exphbs.create({
-    defaultLayout: 'main',
+    defaultLayout: 'layout',
     extname: '.hbs'
 });
 
-const homeRoute = require('./routes/homeRoute');
-const rentRoomRoute = require('./routes/rentRoomRoute');
+const homeRouter = require('./routes/homeRoute');
+const rentRoomRouter = require('./routes/rentRoomRoute');
+const typeofRoomRouter = require('./routes/typeofRoomRouter');
+const roomRouter = require('./routes/roomRouter');
 
 //use view engine
 app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
 
-
-//bodyparsers
-// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
     // parse application/json
 app.use(bodyParser.json())
@@ -31,12 +30,14 @@ app.use(bodyParser.json())
 //set static folder
 app.use(express.static(path.join(__dirname, '/publics/')));
 
+app.use('/', homeRouter);
+app.use('/rent-room', rentRoomRouter);
+app.use('/typeofRoom', typeofRoomRouter);
+app.use('/room', roomRouter);
 
-app.use('/', homeRoute);
-app.use('/rent-room', rentRoomRoute);
 
-app.get('/', (req, res) => {
-    res.render('home', { layout: 'main' });
-});
+// catch 404 and forward to error handler
+//TODO
+//app.use('*', (req, res) => res.render('404', { layout: '404' }))
 
-app.listen(3000);
+app.listen(port, () => console.log(`App listening at http://localhost:${port}`))

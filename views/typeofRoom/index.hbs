@@ -1,0 +1,71 @@
+<div class="main-background">
+    <div class="container-fluid">
+        <div class="rent-room-container">
+            <h1>Danh sách loại phòng</h1>
+            <br>
+            <form action="" method="post">
+                <div style="width: 300px">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small"
+                                   placeholder="Tìm kiếm tên loại phòng..." aria-label="Search"
+                                   aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" style="width: 20px;">#</th>
+                        <th scope="col" style="width: 200px;">Tên</th>
+                        <th scope="col" style="width: 200px;">Đơn giá</th>
+                        <th scope="col" style="width: 100px;">Edit</th>
+                    </tr>
+                    </thead>
+                    <tbody id="rent-room_form_customer-information">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><input class="form-control" type="text" value="A"></td>
+                        <td><input class="form-control" type="text" value="150.000đ"></td>
+                        <td>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa fa-save"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><input class="form-control" type="text" value="B"></td>
+                        <td><input class="form-control" type="text" value="170.000đ"></td>
+                        <td>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa fa-save"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><input class="form-control" type="text" value="A"></td>
+                        <td><input class="form-control" type="text" value="200.000đ"></td>
+                        <td>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa fa-save"></i></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <button type="button" class="btn btn-success" onclick="">+ Thêm loại phòng
+                </button>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="main-background">
+    <div class="container-fluid">
+        <div class="rent-room-container">
+            <h1>Phiếu thuê phòng</h1>
+            <br>
+            <form action="" method="post">
+                <div class="mb-3" style="display: inline-block">
+                    <label class="form-label">Phòng được chọn</label>
+                    <input type="text" class="form-control" id="rent-room_form_input-room" name="room">
+                    <div id="select-room-help" class="form-text"></div>
+                </div>
+                <div class="mb-3" style="display: inline-block; margin-left: 20px;">
+                    <label class="form-label">Ngày bắt đầu thuê</label>
+                    <input type="date" class="form-control" id="rent-room_form_input-date" name="date">
+                    <div id="select-room-help" class="form-text"></div>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" style="width: 20px;">#</th>
+                        <th scope="col" style="width: 200px;">Tên khách hàng</th>
+                        <th scope="col" style="width: 200px;">Loại khách hàng</th>
+                        <th scope="col" style="width: 100px;">CMND</th>
+                        <th scope="col" style="width: 300px;">Địa chỉ</th>
+                        <th scope="col" style="width: 50px;">Edit</th>
+                    </tr>
+                    </thead>
+                    <tbody id="rent-room_form_customer-information">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><input class="form-control" type="text"></td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example"
+                                    placeholder="Chọn loại khách hàng">
+                                <option value="001">Khách trong nước</option>
+                                <option value="002">Khách nước ngoài</option>
+                            </select>
+                        </td>
+                        <td><input class="form-control" type="text"></td>
+                        <td><input class="form-control" type="text"></td>
+                        <td>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><input class="form-control" type="text"></td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example"
+                                    placeholder="Chọn loại khách hàng">
+                                <option value="001">Khách trong nước</option>
+                                <option value="002">Khách nước ngoài</option>
+                            </select>
+                        </td>
+                        <td><input class="form-control" type="text"></td>
+                        <td><input class="form-control" type="text"></td>
+                        <td>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><input class="form-control" type="text"></td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example"
+                                    placeholder="Chọn loại khách hàng">
+                                <option value="001">Khách trong nước</option>
+                                <option value="002">Khách nước ngoài</option>
+                            </select>
+                        </td>
+                        <td><input class="form-control" type="text"></td>
+                        <td><input class="form-control" type="text"></td>
+                        <td>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <button type="button" class="btn btn-success" onclick="rent_room_add_customer()">+ Thêm khách hàng
+                </button>
+                <br><br>
+                <button type="submit" class="btn btn-primary" style="margin:0 auto; display:block;">Thuê Phòng</button>
+            </form>
+        </div>
+    </div>
+</div>
