@@ -8,7 +8,7 @@ module.exports.list = async(req, res, next) => {
 module.exports.getRoom = async(req, res, next) => {
     //TODO
     model.getRoom.then(result => {
-        console.log(result);
+        //console.log(result);
         res.send(result);
 
     }).catch(err => {
@@ -22,7 +22,7 @@ module.exports.getRoom = async(req, res, next) => {
 module.exports.getCustomer = async(req, res, next) => {
     //TODO
     model.getCustomer.then(result => {
-        console.log(result);
+        //console.log(result);
         res.send(result);
 
     }).catch(err => {
