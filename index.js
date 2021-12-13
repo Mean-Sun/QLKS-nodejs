@@ -2,7 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
-require('dotenv').config();
+//require('dotenv').config();
 const port = process.env.PORT || 5000;
 //create app
 const app = express();
