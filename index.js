@@ -13,6 +13,7 @@ const hbs = exphbs.create({
     extname: '.hbs'
 });
 
+const authRouter = require('./routes/authRoute');
 const homeRouter = require('./routes/homeRoute');
 const rentRoomRouter = require('./routes/rentRoomRoute');
 const typeofRoomRouter = require('./routes/typeofRoomRouter');
@@ -34,6 +35,7 @@ app.use('/', homeRouter);
 app.use('/rent-room', rentRoomRouter);
 app.use('/typeofRoom', typeofRoomRouter);
 app.use('/room', roomRouter);
+app.use('/', authRouter);
 
 
 // catch 404 and forward to error handler
