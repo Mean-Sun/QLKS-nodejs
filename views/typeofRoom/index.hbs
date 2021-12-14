@@ -29,33 +29,17 @@
                     </tr>
                     </thead>
                     <tbody id="rent-room_form_customer-information">
+                    {{#each typeofRoom}}
                     <tr>
-                        <th scope="row">1</th>
-                        <td><input class="form-control" type="text" value="A"></td>
-                        <td><input class="form-control" type="text" value="150.000đ"></td>
+                        <th scope="row">{{MaLoai}}</th>
+                        <td><input class="form-control" type="text" value="{{TenLoai}}"></td>
+                        <td><input class="form-control" type="text" value="{{DonGia}}đ"></td>
                         <td>
                             <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
                             <button type="button" class="btn btn-secondary"><i class="fas fa fa-save"></i></button>
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td><input class="form-control" type="text" value="B"></td>
-                        <td><input class="form-control" type="text" value="170.000đ"></td>
-                        <td>
-                            <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
-                            <button type="button" class="btn btn-secondary"><i class="fas fa fa-save"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td><input class="form-control" type="text" value="A"></td>
-                        <td><input class="form-control" type="text" value="200.000đ"></td>
-                        <td>
-                            <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
-                            <button type="button" class="btn btn-secondary"><i class="fas fa fa-save"></i></button>
-                        </td>
-                    </tr>
+                    {{/each}}
                     </tbody>
                 </table>
                 <!-- <div class="mb-3 form-check">

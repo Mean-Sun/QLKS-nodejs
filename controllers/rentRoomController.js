@@ -1,10 +1,11 @@
-var model = require("../model/model")
+const rentRoomService = require("../services/rentRoomService");
 
 module.exports.list = async(req, res, next) => {
     //TODO
     res.render('rentRoom');
 }
 
+/*
 module.exports.getRoom = async(req, res, next) => {
     //TODO
     model.getRoom.then(result => {
@@ -30,4 +31,4 @@ module.exports.getCustomer = async(req, res, next) => {
         res.send(err.message);
     });
 
-};
+};*/

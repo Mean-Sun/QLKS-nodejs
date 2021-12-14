@@ -23,43 +23,27 @@
                     <thead>
                     <tr>
                         <th scope="col" style="width: 20px;">#</th>
-                        <th scope="col" style="width: 150px;">Mã phòng</th>
+                        <th scope="col" style="width: 150px;">Tên phòng</th>
                         <th scope="col" style="width: 150px;">Loại phòng</th>
                         <th scope="col" style="width: 200px;">Tình trạng</th>
+                        <th scope="col" style="width: 200px;">Ghi chú</th>
                         <th scope="col" style="width: 100px;">Edit</th>
                     </tr>
                     </thead>
                     <tbody id="rent-room_form_customer-information">
+                    {{#each rooms}}
                     <tr>
-                        <th scope="row">1</th>
-                        <td><input class="form-control" type="text" value="P01"></td>
-                        <td><input class="form-control" type="text" value="A"></td>
-                        <td><input class="form-control" type="text" value="Còn trống"></td>
+                        <th scope="row">{{MaPhong}}</th>
+                        <td><input class="form-control" type="text" value="{{TenPhong}}"></td>
+                        <td><input class="form-control" type="text" value="{{"LoaiPhong_loaiphong.TenLoai"}}"></td>
+                        <td><input class="form-control" type="text" value="{{TinhTrang}}"></td>
+                        <td><input class="form-control" type="text" value="{{GhiChu}}"></td>
                         <td>
                             <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
                             <button type="button" class="btn btn-secondary"><i class="fas fa fa-save"></i></button>
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td><input class="form-control" type="text" value="P02"></td>
-                        <td><input class="form-control" type="text" value="B"></td>
-                        <td><input class="form-control" type="text" value="Đã thuê"></td>
-                        <td>
-                            <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
-                            <button type="button" class="btn btn-secondary"><i class="fas fa fa-save"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td><input class="form-control" type="text" value="P03"></td>
-                        <td><input class="form-control" type="text" value="C"></td>
-                        <td><input class="form-control" type="text" value="Đang sửa chửa"></td>
-                        <td>
-                            <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></button>
-                            <button type="button" class="btn btn-secondary"><i class="fas fa fa-save"></i></button>
-                        </td>
-                    </tr>
+                    {{/each}}
                     </tbody>
                 </table>
                 <!-- <div class="mb-3 form-check">
